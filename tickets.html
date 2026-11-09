@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Badges & Passes</title>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --background: #0e0f13;
+  --foreground: #f4f4f0;
+  --primary: #ff4d6d;
+  --primary-foreground: #0e0f13;
+  --muted: #1b1d24;
+  --muted-foreground: #a3a7b5;
+  --border: #2b2e38;
+  --accent: #22e3d3;
+  --card: #15171e;
+  --font-heading: 'Bebas Neue', Georgia, serif;
+  --font-body: 'Space Grotesk', system-ui, sans-serif;
+  --radius: 10px;
+}
+html, body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-body); }
+
+[data-goto],button,a[href]{transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
+[data-goto]:hover,button:hover{transform:translateY(-2px);filter:brightness(1.04)}
+.m-t{opacity:0;transform:translateY(var(--m-rise)) scale(var(--m-scale));transition:opacity var(--m-ms) var(--m-ease),transform var(--m-ms) var(--m-ease);transition-delay:var(--m-delay,0ms)}
+img.m-t{transform:scale(1.06)}
+.m-t.m-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.m-t{opacity:1;transform:none;transition:none}[data-goto]:hover,button:hover{transform:none}}
+</style>
+</head>
+<body>
+<!-- navigation -->
+<nav class="sticky top-0 z-50 bg-[var(--background)]/95 backdrop-blur border-b border-[var(--border)]">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16 md:h-20 gap-4">
+
+      <!-- Brand mark with katakana badge -->
+      <a href="#" data-goto="home" class="flex items-center gap-2.5 shrink-0 group">
+        <span
+          class="inline-flex items-center justify-center px-2 py-1 border-2 border-[var(--foreground)] bg-[var(--accent)] text-[var(--background)] text-[11px] leading-none tracking-[0.15em] rounded-[var(--radius)]"
+          style="font-family:var(--font-heading)"
+          aria-hidden="true"
+        >アニ</span>
+        <span class="text-2xl md:text-3xl tracking-[0.04em] text-[var(--foreground)]" style="font-family:var(--font-heading)">AniNYC</span>
+      </a>
+
+      <!-- say: Desktop links, then a compact CTA on the right. -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#" data-goto="home" class="text-sm font-medium text-[var(--muted-foreground)] hover:text-[var(--accent)] transition-colors">Home</a>
+        <a href="#" data-goto="tickets" class="text-sm font-medium text-[var(--muted-foreground)] hover:text-[var(--accent)] transition-colors">Tickets</a>
+        <a href="#" data-goto="guests" class="text-sm font-medium text-[var(--muted-foreground)] hover:text-[var(--accent)] transition-colors">Guests</a>
+        <a href="#" data-goto="plan-your-day" class="text-sm font-medium text-[var(--muted-foreground)] hover:text-[var(--accent)] transition-colors">Plan Your Day</a>
+      </div>
+
+      <div class="flex items-center gap-3 shrink-0">
+        <a
+          href="#"
+          data-goto="tickets"
+          class="inline-flex items-center justify-center px-4 md:px-5 py-2.5 border-2 border-[var(--foreground)] bg-[var(--primary)] text-[var(--primary-foreground)] text-xs md:text-sm uppercase tracking-[0.12em] rounded-[var(--radius)] hover:bg-[var(--accent)] hover:text-[var(--background)] transition-colors"
+          style="font-family:var(--font-heading)"
+        >Get Badges</a>
+      </div>
+
+    </div>
+
+    <!-- say: Mobile row keeps all four links reachable without a menu. -->
+    <div class="md:hidden flex items-center gap-5 overflow-x-auto pb-3 -mx-1 px-1">
+      <a href="#" data-goto="home" class="whitespace-nowrap text-xs font-medium text-[var(--foreground)] hover:text-[var(--accent)] transition-colors">Home</a>
+      <a href="#" data-goto="tickets" class="whitespace-nowrap text-xs font-medium text-[var(--muted-foreground)] hover:text-[var(--accent)] transition-colors">Tickets</a>
+      <a href="#" data-goto="guests" class="whitespace-nowrap text-xs font-medium text-[var(--muted-foreground)] hover:text-[var(--accent)] transition-colors">Guests</a>
+      <a href="#" data-goto="plan-your-day" class="whitespace-nowrap text-xs font-medium text-[var(--muted-foreground)] hover:text-[var(--accent)] transition-colors">Plan Your Day</a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- hero pricing headline -->
+<section class="bg-[var(--background)] text-[var(--foreground)]">
+  <div class="max-w-6xl mx-auto px-6 py-20 md:py-28">
+    <div class="grid gap-12 md:grid-cols-[1.1fr_1fr] md:items-end">
+      <div class="min-w-0">
+        <p class="text-xs font-bold uppercase tracking-[0.25em] text-[var(--accent)]">AniNYC Comic Con 2025</p>
+        <!-- say: Opening up leading and margin so the headline never collides -->
+        <h1 class="block mt-6 mb-0 text-5xl md:text-7xl leading-[1.1] uppercase tracking-tight" style="font-family:var(--font-heading)">Badges &amp; Passes</h1>
+        <p class="mt-6 md:mt-8 text-lg md:text-xl leading-relaxed text-[var(--muted-foreground)] max-w-md">Three tiers. One weekend. Pick your lane.</p>
+      </div>
+
+      <!-- say: Tier prices as the headline number block -->
+      <ul class="border-t border-[var(--border)]" aria-label="Badge tiers and prices">
+        <li class="flex items-baseline justify-between gap-4 py-4 border-b border-[var(--border)]">
+          <span class="text-base md:text-lg">3-Day Full Access</span>
+          <span class="text-2xl md:text-3xl font-bold" style="font-family:var(--font-heading)">$189</span>
+        </li>
+        <li class="flex items-baseline justify-between gap-4 py-4 border-b border-[var(--border)]">
+          <span class="text-base md:text-lg">Saturday Only</span>
+          <span class="text-2xl md:text-3xl font-bold" style="font-family:var(--font-heading)">$95</span>
+        </li>
+        <li class="flex items-baseline justify-between gap-4 py-4 border-b border-[var(--border)]">
+          <span class="text-base md:text-lg">First-Time Fan</span>
+          <span class="text-2xl md:text-3xl font-bold" style="font-family:var(--font-heading)">$129</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- say: Urgency line plus primary buy action -->
+    <div class="mt-10 md:mt-12 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between rounded-[var(--radius)] bg-[var(--card)] border border-[var(--border)] px-6 py-5">
+      <p class="text-sm md:text-base text-[var(--card-foreground,var(--foreground))]">Prices rise at each tier sellout — lock yours now.</p>
+      <a href="#" data-goto="tickets" class="inline-flex items-center justify-center rounded-[var(--radius)] bg-[var(--primary)] text-[var(--primary-foreground)] px-6 py-3 text-sm font-bold uppercase tracking-wider hover:opacity-90 transition-opacity">Get your badge</a>
+    </div>
+  </div>
+</section>
+
+<!-- tier comparison table -->
+<section class="bg-[var(--background)] text-[var(--foreground)] py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+    <!-- say: Section intro frames the comparison table below -->
+    <div class="max-w-2xl">
+      <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)] bg-[var(--muted)] rounded-[var(--radius)] px-3 py-1">Badges &amp; Passes</span>
+      <h2 class="mt-5 text-4xl sm:text-5xl leading-none uppercase" style="font-family:var(--font-heading)">Compare Badges.</h2>
+      <p class="mt-4 text-base text-[var(--muted-foreground)]">Three ways in. Pick the one that matches how you con.</p>
+    </div>
+
+    <!-- say: Three tier cards, coral accent on the top-tier column -->
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+
+      <!-- 3-Day Full Access -->
+      <article class="flex flex-col rounded-[var(--radius)] border-2 border-[var(--primary)] bg-[var(--card)] p-6">
+        <div class="flex items-start justify-between gap-3">
+          <h3 class="text-2xl uppercase leading-tight" style="font-family:var(--font-heading)">3-Day Full Access</h3>
+          <span class="shrink-0 text-[10px] font-bold uppercase tracking-wider bg-[var(--primary)] text-[var(--primary-foreground)] rounded-[var(--radius)] px-2 py-1">Best</span>
+        </div>
+        <p class="mt-4 text-5xl leading-none" style="font-family:var(--font-heading)">$189</p>
+        <ul class="mt-6 space-y-3 text-sm text-[var(--muted-foreground)]">
+          <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 text-[var(--primary)]">▸</span><span>all three days (Fri Oct 3 – Sun Oct 5)</span></li>
+          <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 text-[var(--primary)]">▸</span><span>priority panel seating</span></li>
+          <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 text-[var(--primary)]">▸</span><span>Artist Alley early hour</span></li>
+          <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 text-[var(--primary)]">▸</span><span>exclusive AniNYC 2025 pin</span></li>
+        </ul>
+        <a href="#" data-goto="tickets" class="mt-8 inline-flex items-center justify-center rounded-[var(--radius)] bg-[var(--primary)] text-[var(--primary-foreground)] font-bold uppercase tracking-wide text-sm px-5 py-3 hover:opacity-90 transition">Get this badge</a>
+      </article>
+
+      <!-- say: Middle card, neutral border, Saturday single day -->
+      <article class="flex flex-col rounded-[var(--radius)] border border-[var(--border)] bg-[var(--card)] p-6">
+        <h3 class="text-2xl uppercase leading-tight" style="font-family:var(--font-heading)">Saturday Only</h3>
+        <p class="mt-4 text-5xl leading-none" style="font-family:var(--font-heading)">$95</p>
+        <ul class="mt-6 space-y-3 text-sm text-[var(--muted-foreground)]">
+          <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 text-[var(--accent)]">▸</span><span>single-day Saturday access</span></li>
+          <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 text-[var(--accent)]">▸</span><span>all main-stage panels</span></li>
+          <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 text-[var(--accent)]">▸</span><span>exhibit hall</span></li>
+          <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 text-[var(--accent)]">▸</span><span>no priority seating</span></li>
+        </ul>
+        <a href="#" data-goto="tickets" class="mt-8 inline-flex items-center justify-center rounded-[var(--radius)] border border-[var(--border)] text-[var(--foreground)] font-bold uppercase tracking-wide text-sm px-5 py-3 hover:bg-[var(--muted)] transition">Get this badge</a>
+      </article>
+
+      <!-- say: Third card for first-timers, Friday and Sunday -->
+      <article class="flex flex-col rounded-[var(--radius)] border border-[var(--border)] bg-[var(--card)] p-6">
+        <h3 class="text-2xl uppercase leading-tight" style="font-family:var(--font-heading)">First-Time Fan</h3>
+        <p class="mt-4 text-5xl leading-none" style="font-family:var(--font-heading)">$129</p>
+        <ul class="mt-6 space-y-3 text-sm text-[var(--muted-foreground)]">
+          <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 text-[var(--accent)]">▸</span><span>Friday + Sunday access</span></li>
+          <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 text-[var(--accent)]">▸</span><span>guided First-Con Orientation session</span></li>
+          <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 text-[var(--accent)]">▸</span><span>cosplay repair lounge</span></li>
+          <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 text-[var(--accent)]">▸</span><span>meet-up hub entry</span></li>
+        </ul>
+        <a href="#" data-goto="tickets" class="mt-8 inline-flex items-center justify-center rounded-[var(--radius)] border border-[var(--border)] text-[var(--foreground)] font-bold uppercase tracking-wide text-sm px-5 py-3 hover:bg-[var(--muted)] transition">Get this badge</a>
+      </article>
+    </div>
+
+    <!-- say: Shared inclusions band closes the comparison -->
+    <div class="mt-10 rounded-[var(--radius)] bg-[var(--muted)] border border-[var(--border)] p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
+      <h3 class="text-xl uppercase leading-tight shrink-0" style="font-family:var(--font-heading)">Every badge includes:</h3>
+      <p class="text-sm text-[var(--muted-foreground)]">exhibit hall, Artist Alley, main-stage panels, and the Neon Alley night market.</p>
+    </div>
+  </div>
+</section>
+
+<!-- add-on extras -->
+<section class="bg-[var(--background)] py-20 md:py-28">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- say: Add-on section header in condensed display type. -->
+    <div class="max-w-2xl">
+      <p class="text-[var(--accent)] text-sm uppercase tracking-[0.25em] mb-3" style="font-family:var(--font-heading)">Extras</p>
+      <h2 class="text-[var(--foreground)] text-4xl md:text-5xl uppercase leading-none tracking-tight" style="font-family:var(--font-heading)">Stack Your Weekend.</h2>
+    </div>
+
+    <!-- say: Four add-on cards, title and price stacked in normal flow. -->
+    <ul class="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+      <li class="bg-[var(--card)] border-2 border-[var(--border)] rounded-[var(--radius)] p-6 md:p-8 flex flex-col">
+        <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2">
+          <h3 class="text-[var(--foreground)] text-2xl uppercase leading-tight" style="font-family:var(--font-heading)">Autograph Voucher 5-Pack</h3>
+          <span class="shrink-0 text-[var(--primary-foreground)] bg-[var(--primary)] rounded-[var(--radius)] px-3 py-1 text-lg leading-none" style="font-family:var(--font-heading)">$75</span>
+        </div>
+        <p class="mt-4 text-[var(--muted-foreground)] text-base leading-relaxed">five signatures with participating voice actors, redeemable any day.</p>
+      </li>
+
+      <li class="bg-[var(--card)] border-2 border-[var(--border)] rounded-[var(--radius)] p-6 md:p-8 flex flex-col">
+        <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2">
+          <h3 class="text-[var(--foreground)] text-2xl uppercase leading-tight" style="font-family:var(--font-heading)">Premium Panel Seat</h3>
+          <span class="shrink-0 text-[var(--primary-foreground)] bg-[var(--primary)] rounded-[var(--radius)] px-3 py-1 text-lg leading-none" style="font-family:var(--font-heading)">$40</span>
+        </div>
+        <p class="mt-4 text-[var(--muted-foreground)] text-base leading-relaxed">reserved front-section seat for one panel of your choice.</p>
+      </li>
+
+      <!-- say: Third and fourth cards keep the same flow layout. -->
+      <li class="bg-[var(--card)] border-2 border-[var(--border)] rounded-[var(--radius)] p-6 md:p-8 flex flex-col">
+        <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2">
+          <h3 class="text-[var(--foreground)] text-2xl uppercase leading-tight" style="font-family:var(--font-heading)">Cosplay Repair Kit</h3>
+          <span class="shrink-0 text-[var(--primary-foreground)] bg-[var(--primary)] rounded-[var(--radius)] px-3 py-1 text-lg leading-none" style="font-family:var(--font-heading)">$25</span>
+        </div>
+        <p class="mt-4 text-[var(--muted-foreground)] text-base leading-relaxed">on-site repair lounge access all weekend plus a take-home kit.</p>
+      </li>
+
+      <li class="bg-[var(--card)] border-2 border-[var(--border)] rounded-[var(--radius)] p-6 md:p-8 flex flex-col">
+        <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2">
+          <h3 class="text-[var(--foreground)] text-2xl uppercase leading-tight" style="font-family:var(--font-heading)">Neon Alley Night Pass</h3>
+          <span class="shrink-0 text-[var(--primary-foreground)] bg-[var(--primary)] rounded-[var(--radius)] px-3 py-1 text-lg leading-none" style="font-family:var(--font-heading)">$35</span>
+        </div>
+        <p class="mt-4 text-[var(--muted-foreground)] text-base leading-relaxed">Saturday after-hours market, DJ set and glow-photo booth, 8pm–midnight.</p>
+      </li>
+    </ul>
+
+    <!-- say: Closing callout bar with two navigation links. -->
+    <div class="mt-10 md:mt-14 bg-[var(--muted)] border-2 border-[var(--border)] rounded-[var(--radius)] p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <p class="text-[var(--foreground)] text-base md:text-lg leading-relaxed max-w-xl">Add any of these at checkout — they sell out alongside badges.</p>
+      <div class="flex flex-wrap gap-3">
+        <a href="#" data-goto="tickets" class="inline-block bg-[var(--primary)] text-[var(--primary-foreground)] uppercase tracking-wide px-6 py-3 rounded-[var(--radius)] border-2 border-[var(--border)] text-sm" style="font-family:var(--font-heading)">Get Badges</a>
+        <a href="#" data-goto="guests" class="inline-block bg-transparent text-[var(--foreground)] uppercase tracking-wide px-6 py-3 rounded-[var(--radius)] border-2 border-[var(--border)] text-sm" style="font-family:var(--font-heading)">See Guests</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- group and student discounts -->
+<section class="bg-[var(--background)] py-20 md:py-28">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- say: Opening the section with the heading only, no stray text -->
+    <div class="max-w-2xl">
+      <p class="text-[var(--accent)] font-body text-sm tracking-[0.2em] uppercase mb-3">
+        Discounts
+      </p>
+      <h2
+        style="font-family:var(--font-heading)"
+        class="text-[var(--foreground)] text-4xl md:text-5xl leading-none uppercase tracking-wide"
+      >
+        Bring Your Crew.
+      </h2>
+      <p class="mt-5 text-[var(--muted-foreground)] font-body text-base md:text-lg leading-relaxed">
+        Groups of 6 or more save 15% on any badge tier — one order, one pickup, everyone enters together.
+      </p>
+    </div>
+
+    <!-- say: Two discount cards sit side by side on wide screens -->
+    <div class="mt-12 grid gap-6 md:grid-cols-2">
+      <!-- Student card -->
+      <article
+        class="bg-[var(--card)] border-2 border-[var(--foreground)] rounded-[var(--radius)] p-7 md:p-9 flex flex-col"
+      >
+        <div class="flex items-start justify-between gap-4">
+          <h3
+            style="font-family:var(--font-heading)"
+            class="text-[var(--foreground)] text-2xl md:text-3xl uppercase tracking-wide leading-none"
+          >
+            Students
+          </h3>
+          <span
+            class="shrink-0 bg-[var(--accent)] text-[var(--primary-foreground)] font-body text-sm font-bold px-3 py-1 rounded-[var(--radius)]"
+          >
+            20% off
+          </span>
+        </div>
+        <p class="mt-5 text-[var(--muted-foreground)] font-body text-base leading-relaxed">
+          Students with a valid ID save 20% on the First-Time Fan badge.
+        </p>
+      </article>
+
+      <!-- Cosplay groups card -->
+      <article
+        class="bg-[var(--card)] border-2 border-[var(--foreground)] rounded-[var(--radius)] p-7 md:p-9 flex flex-col"
+      >
+        <div class="flex items-start justify-between gap-4">
+          <h3
+            style="font-family:var(--font-heading)"
+            class="text-[var(--foreground)] text-2xl md:text-3xl uppercase tracking-wide leading-none"
+          >
+            Cosplay Groups
+          </h3>
+          <span
+            class="shrink-0 bg-[var(--primary)] text-[var(--primary-foreground)] font-body text-sm font-bold px-3 py-1 rounded-[var(--radius)]"
+          >
+            4+ people
+          </span>
+        </div>
+        <p class="mt-5 text-[var(--muted-foreground)] font-body text-base leading-relaxed">
+          Cosplay groups of 4+ get a free group photo slot in the Neon Alley studio.
+        </p>
+      </article>
+    </div>
+
+    <!-- say: Custom package band with contact and back-to-tickets link -->
+    <div
+      class="mt-6 bg-[var(--muted)] border-2 border-[var(--border)] rounded-[var(--radius)] p-7 md:p-9 flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+    >
+      <p class="text-[var(--foreground)] font-body text-base md:text-lg leading-relaxed max-w-xl">
+        Email
+        <a
+          href="mailto:groups@aninyc.com"
+          class="text-[var(--accent)] underline underline-offset-4 decoration-2"
+        >
+          groups@aninyc.com
+        </a>
+        for orders over 20 and we'll build you a custom package.
+      </p>
+      <a
+        href="#"
+        data-goto="tickets"
+        class="shrink-0 inline-flex items-center justify-center bg-[var(--primary)] text-[var(--primary-foreground)] font-body font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-[var(--radius)] border-2 border-[var(--foreground)] hover:opacity-90 transition-opacity"
+      >
+        Get Badges
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- live inventory meter -->
+<section class="bg-[var(--background)] py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+      <h2 class="text-4xl md:text-5xl uppercase tracking-wide text-[var(--foreground)]" style="font-family:var(--font-heading)">Live Badge Inventory</h2>
+      <p class="text-sm uppercase tracking-widest text-[var(--accent)]" style="font-family:var(--font-heading)">Updated hourly</p>
+    </div>
+
+    <!-- say: building four inventory rows with bars, each sized to stock -->
+
+    <div class="grid gap-5">
+
+      <article class="bg-[var(--card)] border-2 border-[var(--border)] rounded-[var(--radius)] p-6">
+        <div class="flex flex-wrap items-baseline justify-between gap-3">
+          <h3 class="text-xl uppercase tracking-wide text-[var(--foreground)]" style="font-family:var(--font-heading)">3-Day Full Access</h3>
+          <p class="text-sm text-[var(--muted-foreground)]"><span class="text-2xl text-[var(--foreground)]" style="font-family:var(--font-heading)">412</span> of 2,500 left</p>
+        </div>
+        <div class="mt-4 h-3 w-full bg-[var(--muted)] rounded-[var(--radius)] overflow-hidden">
+          <div class="h-full bg-[var(--primary)]" style="width:16%"></div>
+        </div>
+        <p class="mt-3 inline-block text-xs uppercase tracking-widest text-[var(--primary-foreground)] bg-[var(--accent)] px-3 py-1 rounded-[var(--radius)]" style="font-family:var(--font-heading)">Tier 3 pricing active</p>
+      </article>
+
+      <article class="bg-[var(--card)] border-2 border-[var(--border)] rounded-[var(--radius)] p-6">
+        <div class="flex flex-wrap items-baseline justify-between gap-3">
+          <h3 class="text-xl uppercase tracking-wide text-[var(--foreground)]" style="font-family:var(--font-heading)">Saturday Only</h3>
+          <p class="text-sm text-[var(--muted-foreground)]"><span class="text-2xl text-[var(--foreground)]" style="font-family:var(--font-heading)">88</span> of 1,800 left</p>
+        </div>
+        <div class="mt-4 h-3 w-full bg-[var(--muted)] rounded-[var(--radius)] overflow-hidden">
+          <div class="h-full bg-[var(--accent)]" style="width:5%"></div>
+        </div>
+        <p class="mt-3 text-sm text-[var(--accent)] font-medium">Almost gone</p>
+      </article>
+
+      <!-- say: two calmer rows now, fan and add-on stock -->
+
+      <article class="bg-[var(--card)] border-2 border-[var(--border)] rounded-[var(--radius)] p-6">
+        <div class="flex flex-wrap items-baseline justify-between gap-3">
+          <h3 class="text-xl uppercase tracking-wide text-[var(--foreground)]" style="font-family:var(--font-heading)">First-Time Fan</h3>
+          <p class="text-sm text-[var(--muted-foreground)]"><span class="text-2xl text-[var(--foreground)]" style="font-family:var(--font-heading)">640</span> of 1,200 left</p>
+        </div>
+        <div class="mt-4 h-3 w-full bg-[var(--muted)] rounded-[var(--radius)] overflow-hidden">
+          <div class="h-full bg-[var(--primary)]" style="width:53%"></div>
+        </div>
+      </article>
+
+      <article class="bg-[var(--card)] border-2 border-[var(--border)] rounded-[var(--radius)] p-6">
+        <div class="flex flex-wrap items-baseline justify-between gap-3">
+          <h3 class="text-xl uppercase tracking-wide text-[var(--foreground)]" style="font-family:var(--font-heading)">Add-on Autograph Voucher 5-Pack</h3>
+          <p class="text-sm text-[var(--muted-foreground)]"><span class="text-2xl text-[var(--foreground)]" style="font-family:var(--font-heading)">140</span> left</p>
+        </div>
+        <div class="mt-4 h-3 w-full bg-[var(--muted)] rounded-[var(--radius)] overflow-hidden">
+          <div class="h-full bg-[var(--accent)]" style="width:24%"></div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- say: closing with the no-restock warning and a tickets link -->
+
+    <div class="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 border-t-2 border-[var(--border)] pt-6">
+      <p class="text-[var(--foreground)] max-w-xl">When a tier hits zero it's gone — no restock, no waitlist.</p>
+      <a href="#" data-goto="tickets" class="inline-block text-center bg-[var(--primary)] text-[var(--primary-foreground)] uppercase tracking-widest px-6 py-3 rounded-[var(--radius)] border-2 border-[var(--border)] hover:opacity-90" style="font-family:var(--font-heading)">Get Badges</a>
+    </div>
+  </div>
+</section>
+
+<!-- refund and transfer policy faq -->
+<section class="bg-[var(--background)] py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- say: Starting the fine print FAQ layer with a heading. -->
+    <h2 class="text-4xl md:text-5xl text-[var(--foreground)] uppercase tracking-wide" style="font-family:var(--font-heading)">The Fine Print, Minus the Fine Print</h2>
+
+    <div class="mt-10 grid gap-4 md:grid-cols-2">
+      <!-- say: First two FAQ cards: refunds and transfers. -->
+      <div class="bg-[var(--card)] border-2 border-[var(--border)] rounded-[var(--radius)] p-6">
+        <h3 class="text-xl text-[var(--foreground)] uppercase tracking-wide" style="font-family:var(--font-heading)">Can I get a refund?</h3>
+        <p class="mt-3 text-[var(--muted-foreground)] leading-relaxed">Full refunds until September 1, 2025. After that, 50% until September 20, then no refunds — but you can always transfer.</p>
+      </div>
+      <div class="bg-[var(--card)] border-2 border-[var(--border)] rounded-[var(--radius)] p-6">
+        <h3 class="text-xl text-[var(--foreground)] uppercase tracking-wide" style="font-family:var(--font-heading)">Can I transfer my badge?</h3>
+        <p class="mt-3 text-[var(--muted-foreground)] leading-relaxed">Yes. Transfers are free and open until September 28; log into your order and reassign the badge name.</p>
+      </div>
+
+      <!-- say: Adding mailing and upgrade questions next. -->
+      <div class="bg-[var(--card)] border-2 border-[var(--border)] rounded-[var(--radius)] p-6">
+        <h3 class="text-xl text-[var(--foreground)] uppercase tracking-wide" style="font-family:var(--font-heading)">Are badges mailed?</h3>
+        <p class="mt-3 text-[var(--muted-foreground)] leading-relaxed">All badges are digital. Your QR code lands in your inbox 48 hours before the con.</p>
+      </div>
+      <div class="bg-[var(--card)] border-2 border-[var(--border)] rounded-[var(--radius)] p-6">
+        <h3 class="text-xl text-[var(--foreground)] uppercase tracking-wide" style="font-family:var(--font-heading)">Can I upgrade my tier?</h3>
+        <p class="mt-3 text-[var(--muted-foreground)] leading-relaxed">Yes — pay the price difference any time before September 20.</p>
+      </div>
+    </div>
+
+    <!-- say: Age policy card spans full width with a link out. -->
+    <div class="mt-4 bg-[var(--muted)] border-2 border-[var(--border)] rounded-[var(--radius)] p-6 md:p-8 md:flex md:items-center md:justify-between md:gap-8">
+      <div class="md:max-w-2xl">
+        <h3 class="text-xl text-[var(--foreground)] uppercase tracking-wide" style="font-family:var(--font-heading)">What if I'm under 18?</h3>
+        <p class="mt-3 text-[var(--muted-foreground)] leading-relaxed">Fans 13 and under need a guardian with a badge; 14–17 can attend solo with a signed waiver.</p>
+      </div>
+      <a data-goto="plan-your-day" class="mt-5 md:mt-0 inline-flex shrink-0 items-center gap-2 bg-[var(--primary)] text-[var(--primary-foreground)] px-6 py-3 rounded-[var(--radius)] border-2 border-[var(--border)] font-semibold hover:opacity-90 transition-opacity" style="font-family:var(--font-heading)" href="#">Plan Your Day</a>
+    </div>
+  </div>
+</section>
+
+<!-- checkout cta -->
+<section class="bg-[var(--background)] py-20 sm:py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="relative rounded-[var(--radius)] border-2 border-[var(--foreground)] bg-[var(--card)] p-8 sm:p-12 overflow-hidden">
+      <!-- say: Ink-black corner ticks give this CTA panel manga-panel energy. -->
+      <span aria-hidden="true" class="absolute top-0 left-0 h-10 w-10 border-t-2 border-l-2 border-[var(--accent)]"></span>
+      <span aria-hidden="true" class="absolute bottom-0 right-0 h-10 w-10 border-b-2 border-r-2 border-[var(--accent)]"></span>
+
+      <div class="grid gap-10 md:grid-cols-[1.4fr_1fr] md:items-center">
+        <div class="flex flex-col">
+          <p class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">
+            <span aria-hidden="true" class="inline-block h-2.5 w-2.5 rounded-full bg-[var(--accent)]"></span>
+            Tier 3
+          </p>
+          <!-- say: Headline gets its own block spacing so nothing can sit on it. -->
+          <h2 class="mt-4 block text-4xl sm:text-5xl leading-[1.1] uppercase text-[var(--foreground)]" style="font-family:var(--font-heading)">Grab Your Badge Before the Tier Flips.</h2>
+          <div class="mt-6 flex flex-col gap-3">
+            <p class="text-base sm:text-lg leading-relaxed text-[var(--muted-foreground)] max-w-xl">Checkout takes under two minutes — digital badge, instant confirmation, no printing.</p>
+            <p class="text-sm leading-relaxed text-[var(--muted-foreground)] max-w-xl">Prices go up when this tier sells out, and we're at Tier 3 now.</p>
+          </div>
+        </div>
+
+        <!-- say: Two stacked buttons, primary first, links to the right pages. -->
+        <div class="flex flex-col gap-3 sm:flex-row md:flex-col md:items-stretch">
+          <a href="#" data-goto="tickets" class="inline-flex items-center justify-center rounded-[var(--radius)] bg-[var(--primary)] px-7 py-4 text-center text-base font-bold uppercase tracking-wide text-[var(--primary-foreground)] border-2 border-[var(--foreground)] transition hover:bg-[var(--accent)] hover:text-[var(--foreground)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)]">Get Badges</a>
+          <a href="#" data-goto="guests" class="inline-flex items-center justify-center rounded-[var(--radius)] bg-[var(--muted)] px-7 py-4 text-center text-base font-bold uppercase tracking-wide text-[var(--foreground)] border-2 border-[var(--border)] transition hover:border-[var(--accent)] hover:text-[var(--accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)]">See Who's Coming</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="bg-[var(--foreground)] text-[var(--background)] border-t-4 border-[var(--accent)]">
+  <div class="max-w-6xl mx-auto px-6 py-14">
+    <div class="grid gap-10 md:grid-cols-2 md:gap-12">
+      <div>
+        <p class="text-2xl leading-snug" style="font-family:var(--font-heading);">
+          AniNYC Comic Con
+        </p>
+        <!-- say: I'm setting the address and show details as the footer statement. -->
+        <p class="mt-4 text-sm leading-relaxed text-[var(--muted)]">
+          Javits Center, 429 11th Ave, New York, NY
+        </p>
+        <p class="mt-1 text-sm leading-relaxed text-[var(--muted)]">
+          October 17–19, 2025. Doors 9:00 AM, last entry 7:00 PM.
+        </p>
+        <p class="mt-4 text-sm leading-relaxed text-[var(--accent)]">
+          Follow @AniNYC for guest drops and panel alerts.
+        </p>
+      </div>
+
+      <div class="md:justify-self-end">
+        <!-- say: Now I'm laying out the six footer links in two columns. -->
+        <nav aria-label="Footer">
+          <ul class="grid grid-cols-2 gap-x-8 gap-y-3 text-sm">
+            <li>
+              <a href="#" data-goto="tickets" class="inline-block border-b border-transparent hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors">Tickets</a>
+            </li>
+            <li>
+              <a href="#" data-goto="guests" class="inline-block border-b border-transparent hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors">Guests</a>
+            </li>
+            <li>
+              <a href="#" data-goto="plan-your-day" class="inline-block border-b border-transparent hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors">Plan Your Day</a>
+            </li>
+            <li>
+              <a href="#" class="inline-block border-b border-transparent hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors">Press &amp; Industry</a>
+            </li>
+            <li>
+              <a href="#" class="inline-block border-b border-transparent hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors">Code of Conduct</a>
+            </li>
+            <li>
+              <a href="#" class="inline-block border-b border-transparent hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- say: Closing with a thin accent strip to echo the con lanyard colour. -->
+  <div class="border-t border-[var(--muted)]">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="h-1 w-16 rounded-[var(--radius)] bg-[var(--accent)]"></div>
+    </div>
+  </div>
+</footer>
+<script>
+// layout: a text panel floated over a map or picture moves beside it when it would cover other text
+(() => {
+  const guard = function swarmLayout(root, report) {
+  const doc = root.ownerDocument || root
+  const view = doc.defaultView
+  // a real sentence or name, not a pin number or a one-word label
+  const prose = el => [...el.querySelectorAll('*'), el].some(x => [...x.childNodes].some(n => n.nodeType === 3 && n.textContent.trim().length >= 12))
+  const area = r => Math.max(0, r.width) * Math.max(0, r.height)
+  const meet = (a, b) => Math.max(0, Math.min(a.right, b.right) - Math.max(a.left, b.left)) * Math.max(0, Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top))
+  // on screen: not hidden, not faded out, not inside a closed <details> menu
+  const shown = el => el.checkVisibility ? el.checkVisibility({ opacityProperty: true, visibilityProperty: true }) : !el.closest('details:not([open])') && view.getComputedStyle(el).display !== 'none'
+
+  // every visible run of text in a section, with its box
+  function texts(section) {
+    const out = [], walk = doc.createTreeWalker(section, 4)
+    for (let n = walk.nextNode(); n; n = walk.nextNode()) {
+      if (!n.textContent.trim() || !n.parentElement || !shown(n.parentElement)) continue
+      const r = doc.createRange()
+      r.selectNodeContents(n)
+      const b = r.getBoundingClientRect()
+      if (area(b) > 0) out.push({ node: n, box: b })
+    }
+    return out
+  }
+
+  const clip = t => t.replace(/\s+/g, ' ').trim().slice(0, 48)
+  const found = []
+  for (const section of [...root.children]) {
+    // menus and dropdowns in the nav are meant to sit over the page
+    if (/^(SCRIPT|STYLE|LINK|TEMPLATE|NAV|HEADER)$/.test(section.tagName) || section.dataset.layer === 'nav') continue
+    // text panels the design positions absolutely, outermost first
+    const floats = [...section.querySelectorAll('*')].filter(el => !el.dataset.swarmFlow && view.getComputedStyle(el).position === 'absolute' && shown(el) && prose(el))
+    const outer = floats.filter(el => !floats.some(o => o !== el && o.contains(el)))
+    if (!outer.length) continue
+    const runs = texts(section)
+    const after = new Map()
+    for (const el of outer) {
+      const box = el.getBoundingClientRect()
+      // a badge poking out of its card is fine; a panel on top of other text is not
+      const hit = runs.find(t => !el.contains(t.node) && meet(box, t.box) > 0.25 * area(t.box))
+      if (!hit) continue
+      found.push({ layer: section.dataset.layer || null, index: [...root.children].indexOf(section), panel: clip(el.textContent), covers: clip(hit.node.textContent) })
+      if (report) continue
+      const host = el.offsetParent, hb = host?.getBoundingClientRect()
+      el.dataset.swarmFlow = '1'
+      Object.assign(el.style, { position: 'relative', inset: 'auto', transform: 'none', width: 'auto', maxWidth: '100%', zIndex: 'auto' })
+      // inside the section, the panel leaves the box and sits just above or below it
+      if (!host || host === section || !section.contains(host) || host.contains(section)) continue
+      if (box.top + box.height / 2 < hb.top + hb.height / 2 && !after.has(host)) {
+        host.before(el)
+        el.style.margin = '0 0 16px'
+      } else {
+        ;(after.get(host) || host).after(el)
+        after.set(host, el)
+        el.style.margin = '16px 0 0'
+      }
+    }
+  }
+  return found
+}
+  const run = () => guard(document.body)
+  run()
+  document.fonts && document.fonts.ready.then(run)
+  let t
+  addEventListener('resize', () => { clearTimeout(t); t = setTimeout(run, 150) })
+})()
+
+// motion: sections reveal as they scroll in
+addEventListener('load', () => (function swarmMotion(root, preset) {
+  const p = { gentle: { rise: 18, scale: 1, ms: 750, step: 70, ease: 'cubic-bezier(.2,.7,.2,1)' }, snappy: { rise: 36, scale: 0.96, ms: 520, step: 55, ease: 'cubic-bezier(.34,1.56,.64,1)' } }[preset] || { rise: 18, scale: 1, ms: 750, step: 70, ease: 'ease' }
+  const doc = root.ownerDocument || root
+  const html = doc.documentElement
+  html.style.setProperty('--m-rise', `${p.rise}px`)
+  html.style.setProperty('--m-scale', String(p.scale))
+  html.style.setProperty('--m-ms', `${p.ms}ms`)
+  html.style.setProperty('--m-ease', p.ease)
+  const view = doc.defaultView
+  if (view.matchMedia && view.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  const PICK = 'h1,h2,h3,h4,p,img,button,[data-goto],li,article,figure,blockquote,form,table,svg'
+  // the page's top-level blocks are its sections
+  const sections = [...root.children].filter(el => !/^(SCRIPT|STYLE|LINK|TEMPLATE)$/.test(el.tagName))
+  // once revealed, an element drops the reveal so its hover moves without a delay
+  const settle = el => {
+    const done = e => {
+      if (e.target !== el) return
+      el.removeEventListener('transitionend', done)
+      el.classList.remove('m-t', 'm-in')
+      el.style.removeProperty('--m-delay')
+    }
+    el.addEventListener('transitionend', done)
+  }
+  const show = s => s.querySelectorAll('.m-t:not(.m-in)').forEach(el => { settle(el); el.classList.add('m-in') })
+  const io = new view.IntersectionObserver(entries => {
+    for (const e of entries) {
+      if (!e.isIntersecting) continue
+      io.unobserve(e.target)
+      show(e.target)
+    }
+  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' })
+  sections.forEach((s, si) => {
+    if (s.dataset.mDone) return
+    s.dataset.mDone = '1'
+    // the nav is there from the start
+    if (/^(nav|header)$/i.test(s.tagName) || s.dataset.layer === 'nav' || (si === 0 && s.querySelector('nav'))) return
+    let n = 0
+    for (const el of s.querySelectorAll(PICK)) {
+      if (n >= 14) break
+      if (el.closest('.m-t') || (el.tagName.toLowerCase() !== 'svg' && el.closest('svg'))) continue
+      // tiny things, and things the design already moves or positions with a transform, stay put
+      if (el.getBoundingClientRect().height < 4 || view.getComputedStyle(el).transform !== 'none') continue
+      el.classList.add('m-t')
+      el.style.setProperty('--m-delay', `${Math.min(n, 10) * p.step}ms`)
+      n++
+    }
+    // the first screen plays as the page opens; the rest as it scrolls in
+    if (s.getBoundingClientRect().top < view.innerHeight * 0.9) view.requestAnimationFrame(() => view.requestAnimationFrame(() => show(s)))
+    else io.observe(s)
+  })
+})(document.body, "snappy"))
+
+// buttons and links made on the canvas name the page they go to
+const pages = {"home":"index.html","tickets":"tickets.html","guests":"guests.html","plan-your-day":"plan-your-day.html"}
+document.addEventListener('click', e => {
+  const go = e.target.closest('[data-goto]')
+  if (go && pages[go.dataset.goto]) { e.preventDefault(); location.href = pages[go.dataset.goto] }
+})
+document.addEventListener('submit', e => e.preventDefault())
+</script>
+</body>
+</html>

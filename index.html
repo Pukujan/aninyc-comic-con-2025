@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AniNYC Comic Con 2025</title>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --background: #0e0f13;
+  --foreground: #f4f4f0;
+  --primary: #ff4d6d;
+  --primary-foreground: #0e0f13;
+  --muted: #1b1d24;
+  --muted-foreground: #a3a7b5;
+  --border: #2b2e38;
+  --accent: #22e3d3;
+  --card: #15171e;
+  --font-heading: 'Bebas Neue', Georgia, serif;
+  --font-body: 'Space Grotesk', system-ui, sans-serif;
+  --radius: 10px;
+}
+html, body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-body); }
+
+[data-goto],button,a[href]{transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
+[data-goto]:hover,button:hover{transform:translateY(-2px);filter:brightness(1.04)}
+.m-t{opacity:0;transform:translateY(var(--m-rise)) scale(var(--m-scale));transition:opacity var(--m-ms) var(--m-ease),transform var(--m-ms) var(--m-ease);transition-delay:var(--m-delay,0ms)}
+img.m-t{transform:scale(1.06)}
+.m-t.m-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.m-t{opacity:1;transform:none;transition:none}[data-goto]:hover,button:hover{transform:none}}
+</style>
+</head>
+<body>
+<!-- navigation -->
+<nav class="sticky top-0 z-50 bg-[var(--background)]/95 backdrop-blur border-b border-[var(--border)]">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16 md:h-20 gap-4">
+
+      <!-- Brand mark with katakana badge -->
+      <a href="#" data-goto="home" class="flex items-center gap-2.5 shrink-0 group">
+        <span
+          class="inline-flex items-center justify-center px-2 py-1 border-2 border-[var(--foreground)] bg-[var(--accent)] text-[var(--background)] text-[11px] leading-none tracking-[0.15em] rounded-[var(--radius)]"
+          style="font-family:var(--font-heading)"
+          aria-hidden="true"
+        >アニ</span>
+        <span class="text-2xl md:text-3xl tracking-[0.04em] text-[var(--foreground)]" style="font-family:var(--font-heading)">AniNYC</span>
+      </a>
+
+      <!-- say: Desktop links, then a compact CTA on the right. -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#" data-goto="home" class="text-sm font-medium text-[var(--muted-foreground)] hover:text-[var(--accent)] transition-colors">Home</a>
+        <a href="#" data-goto="tickets" class="text-sm font-medium text-[var(--muted-foreground)] hover:text-[var(--accent)] transition-colors">Tickets</a>
+        <a href="#" data-goto="guests" class="text-sm font-medium text-[var(--muted-foreground)] hover:text-[var(--accent)] transition-colors">Guests</a>
+        <a href="#" data-goto="plan-your-day" class="text-sm font-medium text-[var(--muted-foreground)] hover:text-[var(--accent)] transition-colors">Plan Your Day</a>
+      </div>
+
+      <div class="flex items-center gap-3 shrink-0">
+        <a
+          href="#"
+          data-goto="tickets"
+          class="inline-flex items-center justify-center px-4 md:px-5 py-2.5 border-2 border-[var(--foreground)] bg-[var(--primary)] text-[var(--primary-foreground)] text-xs md:text-sm uppercase tracking-[0.12em] rounded-[var(--radius)] hover:bg-[var(--accent)] hover:text-[var(--background)] transition-colors"
+          style="font-family:var(--font-heading)"
+        >Get Badges</a>
+      </div>
+
+    </div>
+
+    <!-- say: Mobile row keeps all four links reachable without a menu. -->
+    <div class="md:hidden flex items-center gap-5 overflow-x-auto pb-3 -mx-1 px-1">
+      <a href="#" data-goto="home" class="whitespace-nowrap text-xs font-medium text-[var(--foreground)] hover:text-[var(--accent)] transition-colors">Home</a>
+      <a href="#" data-goto="tickets" class="whitespace-nowrap text-xs font-medium text-[var(--muted-foreground)] hover:text-[var(--accent)] transition-colors">Tickets</a>
+      <a href="#" data-goto="guests" class="whitespace-nowrap text-xs font-medium text-[var(--muted-foreground)] hover:text-[var(--accent)] transition-colors">Guests</a>
+      <a href="#" data-goto="plan-your-day" class="whitespace-nowrap text-xs font-medium text-[var(--muted-foreground)] hover:text-[var(--accent)] transition-colors">Plan Your Day</a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- hero with countdown clock -->
+<section class="bg-[var(--background)] text-[var(--foreground)] overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div class="lg:col-span-7 min-w-0">
+        <span class="inline-flex items-center gap-2 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--card)] px-3 py-1.5 text-xs uppercase tracking-[0.18em] text-[var(--accent)]">
+          Neon Alley · 2025
+        </span>
+        <!-- say: headline block isolated so tall Bebas glyphs never bleed downward -->
+        <div class="mt-6 mb-8 md:mb-10">
+          <h1 class="text-[clamp(2.5rem,7.5vw,5rem)] leading-[1.08] uppercase" style="font-family:var(--font-heading)">
+            AniNYC Comic Con <span class="text-[var(--accent)]">2025</span>
+          </h1>
+        </div>
+        <!-- say: date and venue now sit below the headline with clear space -->
+        <p class="text-base md:text-lg text-[var(--muted-foreground)] max-w-xl">
+          October 17–19, 2025 · Javits Center, New York City.
+        </p>
+        <p class="mt-2 text-xl md:text-2xl font-medium max-w-xl">
+          Three days. Four halls. One Neon Alley.
+        </p>
+
+        <!-- say: countdown clock as four ink-outlined panels -->
+        <div class="mt-9">
+          <p class="text-xs uppercase tracking-[0.22em] text-[var(--muted-foreground)]">Countdown to badge drop:</p>
+          <div class="mt-3 grid grid-cols-4 gap-2 sm:gap-3 max-w-md">
+            <div class="rounded-[var(--radius)] border-2 border-[var(--foreground)] bg-[var(--card)] px-2 py-3 text-center">
+              <span class="block text-2xl sm:text-3xl leading-none" style="font-family:var(--font-heading)">42</span>
+              <span class="mt-1 block text-[0.6rem] uppercase tracking-[0.14em] text-[var(--muted-foreground)]">Days</span>
+            </div>
+            <div class="rounded-[var(--radius)] border-2 border-[var(--foreground)] bg-[var(--card)] px-2 py-3 text-center">
+              <span class="block text-2xl sm:text-3xl leading-none" style="font-family:var(--font-heading)">11</span>
+              <span class="mt-1 block text-[0.6rem] uppercase tracking-[0.14em] text-[var(--muted-foreground)]">Hrs</span>
+            </div>
+            <div class="rounded-[var(--radius)] border-2 border-[var(--foreground)] bg-[var(--card)] px-2 py-3 text-center">
+              <span class="block text-2xl sm:text-3xl leading-none" style="font-family:var(--font-heading)">06</span>
+              <span class="mt-1 block text-[0.6rem] uppercase tracking-[0.14em] text-[var(--muted-foreground)]">Min</span>
+            </div>
+            <div class="rounded-[var(--radius)] border-2 border-[var(--foreground)] bg-[var(--card)] px-2 py-3 text-center">
+              <span class="block text-2xl sm:text-3xl leading-none" style="font-family:var(--font-heading)">23</span>
+              <span class="mt-1 block text-[0.6rem] uppercase tracking-[0.14em] text-[var(--muted-foreground)]">Sec</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- say: scarcity line, then the two calls to action -->
+        <p class="mt-7 max-w-xl border-l-2 border-[var(--accent)] pl-4 text-sm md:text-base text-[var(--muted-foreground)]">
+          Badge tiers are capped per day and Tier 1 sold out in 9 days last year.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="#" data-goto="tickets" class="inline-flex items-center justify-center rounded-[var(--radius)] bg-[var(--primary)] px-7 py-3.5 text-sm uppercase tracking-[0.14em] text-[var(--primary-foreground)] hover:opacity-90 transition-opacity" style="font-family:var(--font-heading)">Get Badges</a>
+          <a href="#" data-goto="guests" class="inline-flex items-center justify-center rounded-[var(--radius)] border-2 border-[var(--foreground)] px-7 py-3.5 text-sm uppercase tracking-[0.14em] text-[var(--foreground)] hover:bg-[var(--muted)] transition-colors" style="font-family:var(--font-heading)">See the Guest List</a>
+        </div>
+      </div>
+
+      <!-- say: single hero photo in a sized frame, coral offset border -->
+      <div class="lg:col-span-5">
+        <div class="relative">
+          <div class="absolute -top-3 -left-3 h-full w-full rounded-[var(--radius)] border-2 border-[var(--accent)]" aria-hidden="true"></div>
+          <div class="relative aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5] w-full overflow-hidden rounded-[var(--radius)] border-2 border-[var(--foreground)] bg-[var(--muted)]">
+            <img data-gen="Crowded anime convention hall at night, cosplayers under electric cyan neon signage, manga ink outlines, coral accents, energetic mood" alt="Cosplayers filling a neon-lit convention hall at AniNYC" class="w-full h-full object-cover rounded-[var(--radius)]" src="img/1.webp">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- badge-tier snapshot -->
+<!-- say: Removing stray prompt text and fixing title spacing -->
+<section class="py-20 md:py-28 bg-[var(--background)]">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-2xl">
+      <h2 class="block text-4xl md:text-5xl leading-none tracking-wide text-[var(--foreground)]" style="font-family:var(--font-heading)">Pick Your Pass Before It's Gone.</h2>
+      <p class="block mt-5 text-base md:text-lg text-[var(--muted-foreground)]">Prices rise October 1 — no exceptions, no at-door VIP.</p>
+    </div>
+
+    <!-- say: Three tier cards in a responsive grid -->
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!-- Single Day -->
+      <article class="flex flex-col bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-6">
+        <h3 class="text-2xl tracking-wide text-[var(--foreground)]" style="font-family:var(--font-heading)">Single Day</h3>
+        <p class="mt-3 flex items-baseline gap-1">
+          <span class="text-4xl text-[var(--foreground)]" style="font-family:var(--font-heading)">$65</span>
+        </p>
+        <p class="mt-4 text-sm leading-relaxed text-[var(--muted-foreground)]">one day, all halls, all panels.</p>
+      </article>
+
+      <!-- Weekend -->
+      <article class="flex flex-col bg-[var(--card)] border-2 border-[var(--accent)] rounded-[var(--radius)] p-6">
+        <h3 class="text-2xl tracking-wide text-[var(--foreground)]" style="font-family:var(--font-heading)">Weekend</h3>
+        <p class="mt-3 flex items-baseline gap-1">
+          <span class="text-4xl text-[var(--foreground)]" style="font-family:var(--font-heading)">$165</span>
+        </p>
+        <p class="mt-4 text-sm leading-relaxed text-[var(--muted-foreground)]">all three days, priority panel queue, Neon Alley tote.</p>
+      </article>
+
+      <!-- VIP Neon -->
+      <article class="flex flex-col bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-6">
+        <h3 class="text-2xl tracking-wide text-[var(--foreground)]" style="font-family:var(--font-heading)">VIP Neon</h3>
+        <p class="mt-3 flex items-baseline gap-1">
+          <span class="text-4xl text-[var(--foreground)]" style="font-family:var(--font-heading)">$340</span>
+        </p>
+        <p class="mt-4 text-sm leading-relaxed text-[var(--muted-foreground)]">three days, front-of-line panel seating, VIP lounge with charging lockers, signed guest print, early floor access at 9AM.</p>
+      </article>
+
+    </div>
+
+    <!-- say: Add-ons strip and comparison CTA -->
+    <div class="mt-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6 bg-[var(--muted)] rounded-[var(--radius)] p-6">
+      <p class="text-sm text-[var(--foreground)]">
+        <span class="font-semibold">Add-ons:</span> Cosplay Contest Entry $15 · Photo Op Voucher $45 · After-Party at Terminal 5 $35
+      </p>
+      <a href="#" data-goto="tickets" class="inline-flex shrink-0 items-center justify-center px-6 py-3 text-sm font-semibold uppercase tracking-wider bg-[var(--primary)] text-[var(--primary-foreground)] rounded-[var(--radius)] hover:opacity-90 transition-opacity">Compare All Badges</a>
+    </div>
+  </div>
+</section>
+
+<!-- guest reveal marquee -->
+<section class="bg-[var(--muted)] py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+    <!-- say: Kicking off the guest reveal section header -->
+    <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between md:gap-10 mb-12">
+      <div class="max-w-2xl">
+        <h2 class="text-4xl md:text-6xl leading-none uppercase tracking-wide text-[var(--foreground)]" style="font-family:var(--font-heading)">
+          First Wave Announced.
+        </h2>
+      </div>
+      <div class="flex flex-col gap-4 md:items-end">
+        <p class="text-[var(--muted-foreground)] leading-relaxed md:text-right max-w-xs">
+          More names drop every Friday at noon.
+        </p>
+        <a href="#" data-goto="guests" class="inline-flex items-center gap-2 self-start md:self-auto rounded-[var(--radius)] bg-[var(--primary)] px-6 py-3 text-sm font-medium uppercase tracking-wider text-[var(--primary-foreground)] hover:opacity-90 transition-opacity">
+          See All Guests &amp; Panels
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- say: Four guest cards laid out with ink-border accents -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <article class="flex flex-col gap-3 rounded-[var(--radius)] border-2 border-[var(--foreground)] bg-[var(--card)] p-6">
+        <h3 class="text-2xl uppercase tracking-wide text-[var(--foreground)] leading-tight" style="font-family:var(--font-heading)">
+          Rina Takahashi
+        </h3>
+        <p class="text-sm text-[var(--muted-foreground)] leading-relaxed">
+          voice of Sable in Hollow Blade
+        </p>
+      </article>
+
+      <article class="flex flex-col gap-3 rounded-[var(--radius)] border-2 border-[var(--foreground)] bg-[var(--card)] p-6">
+        <h3 class="text-2xl uppercase tracking-wide text-[var(--foreground)] leading-tight" style="font-family:var(--font-heading)">
+          Marcus Adeyemi
+        </h3>
+        <p class="text-sm text-[var(--muted-foreground)] leading-relaxed">
+          director, Studio Kite
+        </p>
+      </article>
+
+      <article class="flex flex-col gap-3 rounded-[var(--radius)] border-2 border-[var(--foreground)] bg-[var(--card)] p-6">
+        <h3 class="text-2xl uppercase tracking-wide text-[var(--foreground)] leading-tight" style="font-family:var(--font-heading)">
+          Yuki Mori
+        </h3>
+        <p class="text-sm text-[var(--muted-foreground)] leading-relaxed">
+          creator, Neon Alley Chronicles
+        </p>
+      </article>
+
+      <article class="flex flex-col gap-3 rounded-[var(--radius)] border-2 border-[var(--foreground)] bg-[var(--card)] p-6">
+        <h3 class="text-2xl uppercase tracking-wide text-[var(--foreground)] leading-tight" style="font-family:var(--font-heading)">
+          Dana Kwon
+        </h3>
+        <p class="text-sm text-[var(--muted-foreground)] leading-relaxed">
+          voice of Captain Ito, Mecha Dawn
+        </p>
+      </article>
+    </div>
+
+    <!-- say: Highlighting studio panels and exhibitor banner below cards -->
+    <div class="mt-10 rounded-[var(--radius)] border-l-4 border-[var(--accent)] bg-[var(--card)] p-6 md:p-8">
+      <p class="text-base md:text-lg text-[var(--foreground)] leading-relaxed">
+        Plus <span class="text-[var(--accent)] font-medium">Studio Kite's first US panel</span>, the <span class="text-[var(--accent)] font-medium">Hollow Blade season 3 table read</span>, and <span class="text-[var(--accent)] font-medium">40+ exhibitors</span> in the Artist Alley annex.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- convention-floor map teaser -->
+<section class="bg-[var(--background)] text-[var(--foreground)] py-20 md:py-28">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- say: heading block now stacks with clear breathing room -->
+    <div class="max-w-2xl">
+      <p class="text-[var(--accent)] uppercase tracking-[0.2em] text-sm font-semibold mb-3">Convention Floor</p>
+      <h2 class="text-4xl md:text-5xl leading-none uppercase" style="font-family:var(--font-heading)">Know the Floor Before You Walk In</h2>
+      <p class="mt-6 md:mt-8 text-[var(--muted-foreground)] text-base md:text-lg">Four zones, one badge:</p>
+    </div>
+
+    <!-- say: four zone cards in a clean ink-outlined grid -->
+    <div class="mt-10 grid gap-5 sm:grid-cols-2">
+      <div class="bg-[var(--card)] border-2 border-[var(--foreground)] rounded-[var(--radius)] p-6">
+        <span class="inline-block text-[var(--primary-foreground)] bg-[var(--primary)] text-sm font-semibold px-3 py-1 rounded-[var(--radius)] uppercase tracking-wider" style="font-family:var(--font-heading)">Hall A</span>
+        <p class="mt-4 text-[var(--foreground)] text-lg leading-snug">Main Stage and panel rooms.</p>
+      </div>
+
+      <div class="bg-[var(--card)] border-2 border-[var(--foreground)] rounded-[var(--radius)] p-6">
+        <span class="inline-block text-[var(--primary-foreground)] bg-[var(--primary)] text-sm font-semibold px-3 py-1 rounded-[var(--radius)] uppercase tracking-wider" style="font-family:var(--font-heading)">Hall B</span>
+        <p class="mt-4 text-[var(--foreground)] text-lg leading-snug">Exhibitor floor and Studio Kite booth.</p>
+      </div>
+
+      <!-- say: Halls C and D carry the bigger drawing crowds -->
+      <div class="bg-[var(--card)] border-2 border-[var(--foreground)] rounded-[var(--radius)] p-6">
+        <span class="inline-block text-[var(--primary-foreground)] bg-[var(--primary)] text-sm font-semibold px-3 py-1 rounded-[var(--radius)] uppercase tracking-wider" style="font-family:var(--font-heading)">Hall C</span>
+        <p class="mt-4 text-[var(--foreground)] text-lg leading-snug">Artist Alley, 200+ tables.</p>
+      </div>
+
+      <div class="bg-[var(--card)] border-2 border-[var(--foreground)] rounded-[var(--radius)] p-6">
+        <span class="inline-block text-[var(--primary-foreground)] bg-[var(--primary)] text-sm font-semibold px-3 py-1 rounded-[var(--radius)] uppercase tracking-wider" style="font-family:var(--font-heading)">Hall D</span>
+        <p class="mt-4 text-[var(--foreground)] text-lg leading-snug">Cosplay repair, photo sets and the Neon Alley night market.</p>
+      </div>
+    </div>
+
+    <!-- say: doors and bag-check practicals beside the CTA -->
+    <div class="mt-10 grid gap-6 md:grid-cols-[1.4fr_auto] md:items-center bg-[var(--muted)] border border-[var(--border)] rounded-[var(--radius)] p-6 md:p-8">
+      <div class="space-y-3">
+        <p class="text-[var(--foreground)] text-base md:text-lg">Doors open 9AM Friday, 10AM Saturday and Sunday.</p>
+        <p class="text-[var(--muted-foreground)] text-base">Bag check is at the 34th Street entrance — the 11th Ave line moves twice as fast.</p>
+      </div>
+      <a href="#" data-goto="plan-your-day" class="inline-flex items-center justify-center bg-[var(--accent)] text-[var(--background)] font-semibold uppercase tracking-wide px-7 py-3 rounded-[var(--radius)] border-2 border-[var(--foreground)] hover:opacity-90 transition-opacity" style="font-family:var(--font-heading);font-size:1.05rem;">Plan Your Day</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- fan cosplay wall -->
+<section class="bg-[var(--background)] py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- say: Opening the cosplay wall with a bold headline. -->
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+      <div>
+        <p class="text-[var(--accent)] text-sm uppercase tracking-widest font-medium mb-3">Cosplay Contest</p>
+        <h2 class="text-4xl md:text-5xl text-[var(--foreground)] uppercase" style="font-family:var(--font-heading)">Your Work Belongs on This Wall</h2>
+      </div>
+      <a href="#" data-goto="tickets" class="self-start md:self-auto inline-flex items-center justify-center bg-[var(--primary)] text-[var(--primary-foreground)] px-8 py-4 rounded-[var(--radius)] font-medium uppercase tracking-wide hover:opacity-90 transition">Enter the Contest</a>
+    </div>
+
+    <!-- say: Three 2024 highlight cards side by side. -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article class="bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-7">
+        <div class="w-11 h-11 rounded-[var(--radius)] bg-[var(--accent)] mb-5 flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-foreground)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 6.9H22l-5.8 4.4 2.2 7-6.4-4.6L5.6 20.3l2.2-7L2 8.9h7.6z"/></svg>
+        </div>
+        <p class="text-[var(--accent)] text-xs uppercase tracking-widest mb-2">Best in Show</p>
+        <h3 class="text-[var(--foreground)] text-xl font-semibold mb-2">@inkandsteel</h3>
+        <p class="text-[var(--muted-foreground)] text-sm leading-relaxed">Fullmetal Alchemist's Armstrong</p>
+      </article>
+
+      <article class="bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-7">
+        <div class="w-11 h-11 rounded-[var(--radius)] bg-[var(--accent)] mb-5 flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-foreground)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v12"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/><path d="M18 3v12"/><circle cx="18" cy="18" r="3"/></svg>
+        </div>
+        <p class="text-[var(--accent)] text-xs uppercase tracking-widest mb-2">Judges' Pick</p>
+        <h3 class="text-[var(--foreground)] text-xl font-semibold mb-2">@mochi.props</h3>
+        <p class="text-[var(--muted-foreground)] text-sm leading-relaxed">a fully articulated Mecha Dawn pilot rig</p>
+      </article>
+
+      <article class="bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-7">
+        <div class="w-11 h-11 rounded-[var(--radius)] bg-[var(--accent)] mb-5 flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-foreground)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <p class="text-[var(--accent)] text-xs uppercase tracking-widest mb-2">Crowd Favorite</p>
+        <h3 class="text-[var(--foreground)] text-xl font-semibold mb-2">@studio.veil</h3>
+        <p class="text-[var(--muted-foreground)] text-sm leading-relaxed">Neon Alley Chronicles' Sable</p>
+      </article>
+    </div>
+
+    <!-- say: Contest details strip and social prompt below the wall. -->
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-px bg-[var(--border)] border border-[var(--border)] rounded-[var(--radius)] overflow-hidden">
+      <div class="bg-[var(--muted)] px-7 py-6">
+        <p class="text-[var(--muted-foreground)] text-xs uppercase tracking-widest mb-1">Contest Time</p>
+        <p class="text-[var(--foreground)] font-semibold">Saturday 6PM, Main Stage</p>
+      </div>
+      <div class="bg-[var(--muted)] px-7 py-6">
+        <p class="text-[var(--muted-foreground)] text-xs uppercase tracking-widest mb-1">Grand Prize</p>
+        <p class="text-[var(--foreground)] font-semibold">$2,000</p>
+      </div>
+      <div class="bg-[var(--muted)] px-7 py-6">
+        <p class="text-[var(--muted-foreground)] text-xs uppercase tracking-widest mb-1">Entry</p>
+        <p class="text-[var(--foreground)] font-semibold">$15 with any badge</p>
+      </div>
+    </div>
+
+    <div class="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <p class="text-[var(--muted-foreground)] text-sm">Tag <span class="text-[var(--foreground)] font-semibold">#AniNYC2025</span> and you might headline next year's wall.</p>
+      <a href="#" data-goto="guests" class="text-[var(--accent)] text-sm font-medium uppercase tracking-wide hover:opacity-80 transition self-start sm:self-auto">See Guests &amp; Programming →</a>
+    </div>
+  </div>
+</section>
+
+<!-- testimonial quotes -->
+<section class="bg-[var(--background)] py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- say: Heading sets manga-panel tone for fan quotes -->
+    <div class="flex items-end gap-4 mb-12">
+      <div class="w-2 h-12 bg-[var(--accent)] rounded-[var(--radius)]"></div>
+      <h2 class="text-4xl md:text-5xl tracking-wide text-[var(--foreground)]" style="font-family:var(--font-heading)">What Last Year Sounded Like</h2>
+    </div>
+
+    <!-- say: Three testimonial cards in a responsive grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <figure class="bg-[var(--card)] border-2 border-[var(--foreground)] rounded-[var(--radius)] p-7 flex flex-col gap-6">
+        <blockquote class="text-[var(--foreground)] text-lg leading-relaxed">
+          "I came for one panel and stayed all three days. The Artist Alley alone is worth the weekend badge."
+        </blockquote>
+        <figcaption class="mt-auto">
+          <p class="font-semibold text-[var(--foreground)]">— Priya, Queens</p>
+          <p class="text-sm text-[var(--muted-foreground)]">first-time attendee</p>
+        </figcaption>
+      </figure>
+
+      <figure class="bg-[var(--card)] border-2 border-[var(--foreground)] rounded-[var(--radius)] p-7 flex flex-col gap-6">
+        <blockquote class="text-[var(--foreground)] text-lg leading-relaxed">
+          "Lines were organized, staff actually knew the schedule, and the cosplay repair desk saved my armor at 2PM Saturday."
+        </blockquote>
+        <figcaption class="mt-auto">
+          <p class="font-semibold text-[var(--foreground)]">— Devon, Philadelphia</p>
+          <p class="text-sm text-[var(--muted-foreground)]">third year</p>
+        </figcaption>
+      </figure>
+
+      <figure class="bg-[var(--card)] border-2 border-[var(--foreground)] rounded-[var(--radius)] p-7 flex flex-col gap-6">
+        <blockquote class="text-[var(--foreground)] text-lg leading-relaxed">
+          "VIP early access got me the Studio Kite print before it sold out by noon. Worth every dollar."
+        </blockquote>
+        <figcaption class="mt-auto">
+          <p class="font-semibold text-[var(--foreground)]">— Aiko, Brooklyn</p>
+          <p class="text-sm text-[var(--muted-foreground)]">VIP Neon holder</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- say: Stat strip plus a nudge to grab badges -->
+    <div class="mt-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 bg-[var(--muted)] rounded-[var(--radius)] px-8 py-7">
+      <div class="flex flex-col sm:flex-row gap-6 sm:gap-10">
+        <p class="text-2xl text-[var(--foreground)]" style="font-family:var(--font-heading)">
+          <span class="text-[var(--accent)]">38,000</span> fans attended in 2024
+        </p>
+        <p class="text-2xl text-[var(--foreground)]" style="font-family:var(--font-heading)">
+          <span class="text-[var(--accent)]">96%</span> said they'd come back
+        </p>
+      </div>
+      <a href="#" data-goto="tickets" class="inline-block text-center bg-[var(--primary)] text-[var(--primary-foreground)] font-semibold px-7 py-3 rounded-[var(--radius)] border-2 border-[var(--foreground)]">Grab Your Badge</a>
+    </div>
+  </div>
+</section>
+
+<!-- sticky cta bar -->
+<section class="sticky bottom-0 z-40 border-t-2 border-[var(--primary)] bg-[var(--background)]/95 backdrop-blur-sm" aria-label="Badge availability notice">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+
+    <!-- say: Sticky bar keeps the urgency line visible while scrolling. -->
+    <div class="flex items-start gap-3 min-w-0">
+      <span class="mt-0.5 inline-flex shrink-0 items-center rounded-[var(--radius)] bg-[var(--muted)] px-2 py-1 text-xs font-bold uppercase tracking-widest text-[var(--accent)]" style="font-family:var(--font-heading)">Tier 1</span>
+      <p class="text-sm sm:text-base leading-snug text-[var(--foreground)]">
+        Tier 1 is sold out. Weekend and VIP Neon badges are capped per day and prices go up October 1.
+      </p>
+    </div>
+
+    <!-- say: Primary badge CTA pairs with schedule link, both go elsewhere. -->
+    <div class="flex shrink-0 items-center gap-3">
+      <a
+        href="#tickets"
+        data-goto="tickets"
+        class="inline-flex items-center justify-center rounded-[var(--radius)] bg-[var(--primary)] px-5 py-2.5 text-sm sm:text-base font-bold uppercase tracking-wide text-[var(--primary-foreground)] border-2 border-[var(--foreground)] transition-transform duration-150 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+        style="font-family:var(--font-heading)"
+      >Get Badges</a>
+      <a
+        href="#guests"
+        data-goto="guests"
+        class="inline-flex items-center justify-center rounded-[var(--radius)] border-2 border-[var(--border)] px-5 py-2.5 text-sm sm:text-base font-bold uppercase tracking-wide text-[var(--foreground)] transition-colors duration-150 hover:border-[var(--accent)] hover:text-[var(--accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+        style="font-family:var(--font-heading)"
+      >View Schedule</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="bg-[var(--foreground)] text-[var(--background)] border-t-4 border-[var(--accent)]">
+  <div class="max-w-6xl mx-auto px-6 py-14">
+    <div class="grid gap-10 md:grid-cols-2 md:gap-12">
+      <div>
+        <p class="text-2xl leading-snug" style="font-family:var(--font-heading);">
+          AniNYC Comic Con
+        </p>
+        <!-- say: I'm setting the address and show details as the footer statement. -->
+        <p class="mt-4 text-sm leading-relaxed text-[var(--muted)]">
+          Javits Center, 429 11th Ave, New York, NY
+        </p>
+        <p class="mt-1 text-sm leading-relaxed text-[var(--muted)]">
+          October 17–19, 2025. Doors 9:00 AM, last entry 7:00 PM.
+        </p>
+        <p class="mt-4 text-sm leading-relaxed text-[var(--accent)]">
+          Follow @AniNYC for guest drops and panel alerts.
+        </p>
+      </div>
+
+      <div class="md:justify-self-end">
+        <!-- say: Now I'm laying out the six footer links in two columns. -->
+        <nav aria-label="Footer">
+          <ul class="grid grid-cols-2 gap-x-8 gap-y-3 text-sm">
+            <li>
+              <a href="#" data-goto="tickets" class="inline-block border-b border-transparent hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors">Tickets</a>
+            </li>
+            <li>
+              <a href="#" data-goto="guests" class="inline-block border-b border-transparent hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors">Guests</a>
+            </li>
+            <li>
+              <a href="#" data-goto="plan-your-day" class="inline-block border-b border-transparent hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors">Plan Your Day</a>
+            </li>
+            <li>
+              <a href="#" class="inline-block border-b border-transparent hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors">Press &amp; Industry</a>
+            </li>
+            <li>
+              <a href="#" class="inline-block border-b border-transparent hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors">Code of Conduct</a>
+            </li>
+            <li>
+              <a href="#" class="inline-block border-b border-transparent hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- say: Closing with a thin accent strip to echo the con lanyard colour. -->
+  <div class="border-t border-[var(--muted)]">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="h-1 w-16 rounded-[var(--radius)] bg-[var(--accent)]"></div>
+    </div>
+  </div>
+</footer>
+<script>
+// layout: a text panel floated over a map or picture moves beside it when it would cover other text
+(() => {
+  const guard = function swarmLayout(root, report) {
+  const doc = root.ownerDocument || root
+  const view = doc.defaultView
+  // a real sentence or name, not a pin number or a one-word label
+  const prose = el => [...el.querySelectorAll('*'), el].some(x => [...x.childNodes].some(n => n.nodeType === 3 && n.textContent.trim().length >= 12))
+  const area = r => Math.max(0, r.width) * Math.max(0, r.height)
+  const meet = (a, b) => Math.max(0, Math.min(a.right, b.right) - Math.max(a.left, b.left)) * Math.max(0, Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top))
+  // on screen: not hidden, not faded out, not inside a closed <details> menu
+  const shown = el => el.checkVisibility ? el.checkVisibility({ opacityProperty: true, visibilityProperty: true }) : !el.closest('details:not([open])') && view.getComputedStyle(el).display !== 'none'
+
+  // every visible run of text in a section, with its box
+  function texts(section) {
+    const out = [], walk = doc.createTreeWalker(section, 4)
+    for (let n = walk.nextNode(); n; n = walk.nextNode()) {
+      if (!n.textContent.trim() || !n.parentElement || !shown(n.parentElement)) continue
+      const r = doc.createRange()
+      r.selectNodeContents(n)
+      const b = r.getBoundingClientRect()
+      if (area(b) > 0) out.push({ node: n, box: b })
+    }
+    return out
+  }
+
+  const clip = t => t.replace(/\s+/g, ' ').trim().slice(0, 48)
+  const found = []
+  for (const section of [...root.children]) {
+    // menus and dropdowns in the nav are meant to sit over the page
+    if (/^(SCRIPT|STYLE|LINK|TEMPLATE|NAV|HEADER)$/.test(section.tagName) || section.dataset.layer === 'nav') continue
+    // text panels the design positions absolutely, outermost first
+    const floats = [...section.querySelectorAll('*')].filter(el => !el.dataset.swarmFlow && view.getComputedStyle(el).position === 'absolute' && shown(el) && prose(el))
+    const outer = floats.filter(el => !floats.some(o => o !== el && o.contains(el)))
+    if (!outer.length) continue
+    const runs = texts(section)
+    const after = new Map()
+    for (const el of outer) {
+      const box = el.getBoundingClientRect()
+      // a badge poking out of its card is fine; a panel on top of other text is not
+      const hit = runs.find(t => !el.contains(t.node) && meet(box, t.box) > 0.25 * area(t.box))
+      if (!hit) continue
+      found.push({ layer: section.dataset.layer || null, index: [...root.children].indexOf(section), panel: clip(el.textContent), covers: clip(hit.node.textContent) })
+      if (report) continue
+      const host = el.offsetParent, hb = host?.getBoundingClientRect()
+      el.dataset.swarmFlow = '1'
+      Object.assign(el.style, { position: 'relative', inset: 'auto', transform: 'none', width: 'auto', maxWidth: '100%', zIndex: 'auto' })
+      // inside the section, the panel leaves the box and sits just above or below it
+      if (!host || host === section || !section.contains(host) || host.contains(section)) continue
+      if (box.top + box.height / 2 < hb.top + hb.height / 2 && !after.has(host)) {
+        host.before(el)
+        el.style.margin = '0 0 16px'
+      } else {
+        ;(after.get(host) || host).after(el)
+        after.set(host, el)
+        el.style.margin = '16px 0 0'
+      }
+    }
+  }
+  return found
+}
+  const run = () => guard(document.body)
+  run()
+  document.fonts && document.fonts.ready.then(run)
+  let t
+  addEventListener('resize', () => { clearTimeout(t); t = setTimeout(run, 150) })
+})()
+
+// motion: sections reveal as they scroll in
+addEventListener('load', () => (function swarmMotion(root, preset) {
+  const p = { gentle: { rise: 18, scale: 1, ms: 750, step: 70, ease: 'cubic-bezier(.2,.7,.2,1)' }, snappy: { rise: 36, scale: 0.96, ms: 520, step: 55, ease: 'cubic-bezier(.34,1.56,.64,1)' } }[preset] || { rise: 18, scale: 1, ms: 750, step: 70, ease: 'ease' }
+  const doc = root.ownerDocument || root
+  const html = doc.documentElement
+  html.style.setProperty('--m-rise', `${p.rise}px`)
+  html.style.setProperty('--m-scale', String(p.scale))
+  html.style.setProperty('--m-ms', `${p.ms}ms`)
+  html.style.setProperty('--m-ease', p.ease)
+  const view = doc.defaultView
+  if (view.matchMedia && view.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  const PICK = 'h1,h2,h3,h4,p,img,button,[data-goto],li,article,figure,blockquote,form,table,svg'
+  // the page's top-level blocks are its sections
+  const sections = [...root.children].filter(el => !/^(SCRIPT|STYLE|LINK|TEMPLATE)$/.test(el.tagName))
+  // once revealed, an element drops the reveal so its hover moves without a delay
+  const settle = el => {
+    const done = e => {
+      if (e.target !== el) return
+      el.removeEventListener('transitionend', done)
+      el.classList.remove('m-t', 'm-in')
+      el.style.removeProperty('--m-delay')
+    }
+    el.addEventListener('transitionend', done)
+  }
+  const show = s => s.querySelectorAll('.m-t:not(.m-in)').forEach(el => { settle(el); el.classList.add('m-in') })
+  const io = new view.IntersectionObserver(entries => {
+    for (const e of entries) {
+      if (!e.isIntersecting) continue
+      io.unobserve(e.target)
+      show(e.target)
+    }
+  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' })
+  sections.forEach((s, si) => {
+    if (s.dataset.mDone) return
+    s.dataset.mDone = '1'
+    // the nav is there from the start
+    if (/^(nav|header)$/i.test(s.tagName) || s.dataset.layer === 'nav' || (si === 0 && s.querySelector('nav'))) return
+    let n = 0
+    for (const el of s.querySelectorAll(PICK)) {
+      if (n >= 14) break
+      if (el.closest('.m-t') || (el.tagName.toLowerCase() !== 'svg' && el.closest('svg'))) continue
+      // tiny things, and things the design already moves or positions with a transform, stay put
+      if (el.getBoundingClientRect().height < 4 || view.getComputedStyle(el).transform !== 'none') continue
+      el.classList.add('m-t')
+      el.style.setProperty('--m-delay', `${Math.min(n, 10) * p.step}ms`)
+      n++
+    }
+    // the first screen plays as the page opens; the rest as it scrolls in
+    if (s.getBoundingClientRect().top < view.innerHeight * 0.9) view.requestAnimationFrame(() => view.requestAnimationFrame(() => show(s)))
+    else io.observe(s)
+  })
+})(document.body, "snappy"))
+
+// buttons and links made on the canvas name the page they go to
+const pages = {"home":"index.html","tickets":"tickets.html","guests":"guests.html","plan-your-day":"plan-your-day.html"}
+document.addEventListener('click', e => {
+  const go = e.target.closest('[data-goto]')
+  if (go && pages[go.dataset.goto]) { e.preventDefault(); location.href = pages[go.dataset.goto] }
+})
+document.addEventListener('submit', e => e.preventDefault())
+</script>
+</body>
+</html>
